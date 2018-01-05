@@ -22,5 +22,5 @@ Build and run using Docker Compose:
 	$ docker-cloud stack up
 
 Hello world!
-Lets Go!!!
+Lets Go!!!.
 Round 2!!!
