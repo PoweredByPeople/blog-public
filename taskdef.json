@@ -1,9 +1,9 @@
 {
-    "family": "hellolb",
+    "family": "hello",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "hellolb",
+            "name": "hello",
             "cpu": 10,
             "memory": 256,
             "essential": true,
