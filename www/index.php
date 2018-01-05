@@ -18,7 +18,7 @@
 <body>
 	<img id="logo" src="logo.png" />
 	<h1><?php echo "Hello ".($_ENV["NAME"]?$_ENV["NAME"]:"world")."!!!! Whaddup Doh?"; ?></h1>
-	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is Poopysauce <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 	<?php
 	$links = [];
 	foreach($_ENV as $key => $value) {
