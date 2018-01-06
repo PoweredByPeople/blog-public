@@ -25,7 +25,17 @@ app.register_blueprint(sam_api_tester_bp, url_prefix='/5620sam')
 @app.route('/')
 def index():
     user = {'username': 'Louis'}
-    return render_template('index.html', title='Home', user=user)
+    posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
 
 if __name__ == '__main__':
     # if we are in Prod, use HOST and PORT specified
