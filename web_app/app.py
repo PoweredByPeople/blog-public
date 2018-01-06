@@ -24,7 +24,8 @@ app.register_blueprint(sam_api_tester_bp, url_prefix='/5620sam')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user = {'username': 'Louis'}
+    return render_template('index.html', title='Home', user=user)
 
 if __name__ == '__main__':
     # if we are in Prod, use HOST and PORT specified

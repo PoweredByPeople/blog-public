@@ -1,11 +1,8 @@
-def index():
-    user = {'username': 'Louis'}
-    return '''
 <html>
     <head>
-        <title>Home Page - blog</title>
+        <title>{{ title }} - blog</title>
     </head>
     <body>
-        <h1>Hello, ''' + user['username'] + '''!</h1>
+        <h1>Hello, {{ user.username }}!</h1>
     </body>
-</html>'''
+</html>
