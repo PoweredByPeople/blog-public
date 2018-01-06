@@ -18,7 +18,7 @@
 <body>
 	<img id="logo" src="logo.png" />
 	<h1><?php echo "Hello, Welcome to the future home of Louis LaCroix's blog. Do we still have local deploys working?
-	Yes, yes we do..."; ?></h1>
+	Yes, yes we do... Happy Birthday Nic!"; ?></h1>
 	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 	<?php
 	$links = [];
