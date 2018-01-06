@@ -1,13 +1,13 @@
-FROM alpine:3.4
-
-RUN apk --update add nginx php5-fpm && \
-    mkdir -p /var/log/nginx && \
-    touch /var/log/nginx/access.log && \
-    mkdir -p /run/nginx
-
-ADD www /www
-ADD nginx.conf /etc/nginx/
-ADD php-fpm.conf /etc/php5/php-fpm.conf
-
+FROM alpine:latest
+RUN apk add --no-cache python3 && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    rm -r /root/.cache
+COPY ./web_app/requirements.txt /tmp/requirements.txt
+RUN pip3 install -qr /tmp/requirements.txt
+RUN mkdir -p /opt/webapp
+COPY ./web_app /opt/webapp/
+WORKDIR /opt/webapp
 EXPOSE 80
-CMD php-fpm -d variables_order="EGPCS" && (tail -F /var/log/nginx/access.log &) && exec nginx -g "daemon off;"
+CMD ["python3", "app.py"]
