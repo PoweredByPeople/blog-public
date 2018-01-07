@@ -1,9 +1,9 @@
 {
-    "family": "west",
+    "family": "blog-west",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "west",
+            "name": "blog-west",
             "cpu": 10,
             "memory": 256,
             "essential": true,
