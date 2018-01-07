@@ -25,7 +25,7 @@ app.register_blueprint(sam_api_tester_bp, url_prefix='/5620sam')
 
 @app.route('/')
 def index():
-    user = {'username': 'Louis'}
+    user = {'username': 'Phil'}
     posts = [
         {
             'author': {'username': 'John'},
