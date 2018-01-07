@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import os
 import config
-from app.forms import LoginForm
+
 
 
 root_folder_path = os.path.dirname(os.path.abspath(__file__))
@@ -37,11 +37,6 @@ def index():
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
-
-@app.route('/login')
-def login():
-    form = LoginForm()
-    return render_template('login.html', title='Sign In', form=form)
 
 
 if __name__ == '__main__':
