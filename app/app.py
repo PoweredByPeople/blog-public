@@ -1,8 +1,3 @@
-from flask import Flask, render_template
-import os
-import config
-
-
 
 root_folder_path = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,22 +16,6 @@ app.register_blueprint(get_vmrc_links_bp, url_prefix='/vmware')
 
 from scripts_bank._5620sam.sam_xml_api_tester.sam_xml_api_tester import sam_api_tester_bp
 app.register_blueprint(sam_api_tester_bp, url_prefix='/5620sam')
-
-
-@app.route('/')
-def index():
-    user = {'username': 'Phil'}
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
 
 
 if __name__ == '__main__':
