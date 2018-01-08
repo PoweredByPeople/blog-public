@@ -7,7 +7,7 @@ RUN apk add --no-cache python3 && \
 COPY ./app/requirements.txt /tmp/requirements.txt
 RUN pip3 install -qr /tmp/requirements.txt
 RUN mkdir -p /opt/webapp
-COPY ./app /opt/webapp/
+COPY . /opt/webapp/
 WORKDIR /opt/webapp
 EXPOSE 80
 CMD ["python3", "app.py"]
