@@ -26,7 +26,7 @@ PyJWT==1.5.3
 python-dateutil==2.6.1
 python-dotenv==0.7.1
 python-editor==1.0.3
-PyMySQL==0.6.3
+PyMySQL
 pytz==2017.2
 redis==2.10.6
 requests==2.18.4
