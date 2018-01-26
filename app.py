@@ -5,4 +5,4 @@ from app.models import User, Post
 def make_shell_context():
     return {'db': db, 'User': User, 'Post': Post}
 
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', port=80)
