@@ -2,10 +2,3 @@ helloworld:
   build: .
   ports:
     - "80:80"
-  environment:
-    - DATABASE_URL=${DATABASE_URL}
-    - MAIL_PASSWORD=${MAIL_PASSWORD}
-    - MAIL_PORT=${MAIL_PORT}
-    - MAIL_SERVER=${MAIL_SERVER}
-    - MAIL_USE_TLS=${MAIL_USE_TLS}
-    - MAIL_USERNAME=${MAIL_USERNAME}
