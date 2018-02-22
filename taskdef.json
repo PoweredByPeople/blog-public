@@ -6,31 +6,31 @@
             "name": "blog-west",
             "cpu": 10,
             "environment": [
-        {
-          "name": "DATABASE_URL",
-          "value": "mysql+pymysql://admin:basketball@blogdb.c7aovky3o2ur.us-east-1.rds.amazonaws.com/blog"
-        },
-        {
-          "name": "MAIL_PASSWORD",
-          "value": "@Wert147"
-        },
-        {
-          "name": "MAIL_PORT",
-          "value": "587"
-        },
-        {
-          "name": "MAIL_SERVER",
-          "value": "smtp.mailgun.org"
-        },
-        {
-          "name": "MAIL_USE_TLS",
-          "value": "True"
-        },
-        {
-          "name": "MAIL_USERNAME",
-          "value": "postmaster@mg.poweredbypeople.me"
-        }
-      ],
+                {
+                  "name": "DATABASE_URL",
+                  "value": "mysql+pymysql://admin:basketball@blogdb.c7aovky3o2ur.us-east-1.rds.amazonaws.com/blog"
+                },
+                {
+                  "name": "MAIL_PASSWORD",
+                  "value": "@Wert147"
+                },
+                {
+                  "name": "MAIL_PORT",
+                  "value": "587"
+                },
+                {
+                  "name": "MAIL_SERVER",
+                  "value": "smtp.mailgun.org"
+                },
+                {
+                  "name": "MAIL_USE_TLS",
+                  "value": "True"
+                },
+                {
+                  "name": "MAIL_USERNAME",
+                  "value": "postmaster@mg.poweredbypeople.me"
+                }
+              ],
             "memory": 256,
             "essential": true,
             "portMappings": [
