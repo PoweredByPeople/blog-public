@@ -30,7 +30,7 @@
           "name": "MAIL_USERNAME",
           "value": "postmaster@mg.poweredbypeople.me"
         }
-      ]
+      ],
             "memory": 256,
             "essential": true,
             "portMappings": [
