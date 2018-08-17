@@ -20,6 +20,7 @@ The above process takes about 90 seconds for the changes to show up on the live 
   - Route 53: Providing DNS and domain management. 
   - CloudFormation: Utilized templates for the initial design and implementation of the application and Jenkins server stacks. 
 - Jenkins: Created a project to handle the build and deployment of the application. The main functionality is a Docker Build and Publish step with some additional shell scripts to handle the AWS deployment. Jenkins is connected to the main github repo for automatic triggering of the build on commit.
+- Docker: Docker provided a great way to package the application and support a variety of different environments. The Jenkins job built a docker image and deployed it into a ECS cluster. 
 
 #### Supporting Services:
 - Clubhouse: A project management tool that provided a way to organize and prioritize my work. https://clubhouse.io/ 
