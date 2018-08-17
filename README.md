@@ -2,7 +2,7 @@
 
 This project is a python/flask application running on modern, public cloud infrastructure. The goal of this project was to learn about and experiment with modern software development lifecycle tools. I aimed to use free/open source, industry standard tools across the board. 
 
-## SDLC pipline design:
+## SDLC pipeline design:
 
 I've built a pipeline that, on code commit, deploys automatically on to AWS infrastructure and runs at http://poweredbypeople.me/
 
@@ -20,12 +20,12 @@ The above process takes about 90 seconds for the changes to show up on the live 
   - Route 53: Providing DNS and domain management. 
   - CloudFormation: Utilized templates for the initial design and implementation of the application and Jenkins server stacks. 
 - Jenkins: Created a project to handle the build and deployment of the application. The main functionality is a Docker Build and Publish step with some additional shell scripts to handle the AWS deployment. Jenkins is connected to the main github repo for automatic triggering of the build on commit.
-- Docker: Docker provided a great way to package the application and support a variety of different environments. The Jenkins job built a docker image and deployed it into a ECS cluster. 
+- Docker: Docker provided a great way to package the application and support a variety of different environments. The Jenkins job builds a docker image and deploys it into a ECS cluster. 
 
 #### Supporting Services:
 - Clubhouse: A project management tool that provided a way to organize and prioritize my work. https://clubhouse.io/ 
 - Github: Code repository.
 - Mailgun and Yandex: The application has user login and password reset functionality. This required some form of email service to work. I implemented Mailgun and Yandex for the email management. https://www.mailgun.com/ https://mail.yandex.com
-- Datadog: Monitoring for the infrastructure, application events and performance. Server metrics and code deployments are shown side by side to help correlate potential issues with thier cause. https://www.datadoghq.com/ 
+- Datadog: Monitoring for the infrastructure, application events and performance. Server metrics and code deployments are shown side by side to help correlate potential issues with their cause. https://www.datadoghq.com/ 
 
 Big thanks to Miguel Grinberg and The Flask Mega-Tutorial. The end result is that I used most of his actual application code in this project but came up with my own solutions to the operations and build/deployment side of the project.  My goal was to familiarize myself with python web development but really focus on the operations side of this project. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world  
