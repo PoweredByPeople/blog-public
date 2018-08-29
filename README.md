@@ -1,10 +1,10 @@
 # Overview:
 
-This project is a python/flask application running on modern, public cloud infrastructure. The goal of this project was to learn about and experiment with modern software development lifecycle tools. I aimed to use free/open source, industry standard tools across the board. 
+This project is a python/flask application running on public cloud infrastructure. The goal of this project was to experiment with modern software development lifecycle tools to take a project from code in an ide to an application running in production. I built a devops toolchain that automates software deployment using some of the most popular technologies available today.
 
 ## SDLC pipeline design:
 
-I've built a pipeline that, on code commit, deploys automatically on to AWS infrastructure and runs at http://poweredbypeople.me/
+I've built a pipeline that, on code commit, deploys automatically on to AWS infrastructure and runs at https://poweredbypeople.me/
 
 Write code (Pycharm ide) -> Commit (Github) -> Build (Jenkins) -> Deploy (AWS) 
 
@@ -20,7 +20,7 @@ The above process takes about 90 seconds for the changes to show up on the live 
   - Route 53: Providing DNS and domain management. 
   - CloudFormation: Utilized templates for the initial design and implementation of the application and Jenkins server stacks. 
 - Jenkins: Created a project to handle the build and deployment of the application. The main functionality is a Docker Build and Publish step with some additional shell scripts to handle the AWS deployment. Jenkins is connected to the main github repo for automatic triggering of the build on commit.
-- Docker: Docker provided a great way to package the application and support a variety of different environments. The Jenkins job builds a docker image and deploys it into a ECS cluster. 
+- Docker: Docker provided a great way to package the application and support a variety of different environments. The Jenkins job builds a docker image from a Dockerfile located at the root of my project and deploys it into a ECS cluster. 
 
 #### Supporting Services:
 - Clubhouse: A project management tool that provided a way to organize and prioritize my work. https://clubhouse.io/ 
